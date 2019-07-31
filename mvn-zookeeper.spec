@@ -4,12 +4,13 @@
 #
 Name     : mvn-zookeeper
 Version  : 3.4.6
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar
-Source1  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.jar
-Source2  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.pom
-Source3  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.pom
+Source1  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13-tests.jar
+Source2  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.jar
+Source3  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.pom
+Source4  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -32,16 +33,19 @@ data components for the mvn-zookeeper package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13-tests.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.pom
 
 
 %files
@@ -49,6 +53,7 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/zookeeper/zo
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13-tests.jar
 /usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.jar
 /usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.13/zookeeper-3.4.13.pom
 /usr/share/java/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar
