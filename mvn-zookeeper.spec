@@ -4,7 +4,7 @@
 #
 Name     : mvn-zookeeper
 Version  : 3.4.6
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.10/zookeeper-3.4.10.jar
